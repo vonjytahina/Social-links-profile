@@ -1,0 +1,125 @@
+/* import font family*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* colors */
+:root {
+  --primary-green: hsl(75, 94%, 57%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey: hsl(0, 0%, 20%);
+  --neutral-dark-grey: hsl(0, 0%, 12%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+/* global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  height: 960px;
+  background: var(--neutral-off-black);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container .app {
+  width: 385px;
+  height: auto;
+  background: var(--neutral-dark-grey);
+  border-radius: 10px;
+  margin: 170px auto;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .app .avatar {
+  width: 90px;
+  height: 90px;
+  background: url('assets/images/avatar-jessica.jpeg');
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.container .app .name {
+  font-size: 26px;
+  color: var(--neutral-white);
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.container .app .location {
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.container .app .citation {
+  color: var(--neutral-white);
+  margin-bottom: 30px;
+}
+
+.container .app .btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background: var(--neutral-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-white);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  font-weight: 600;
+}
+
+.container .app .btn:last-child {
+  margin-bottom: 0px;
+}
+
+.container .app .btn:hover {
+  background: var(--primary-green);
+  color: var(--neutral-grey);
+}
+
+.attribution {
+  margin: 20px auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+/* responsive */
+
+@media screen and (max-width: 400px) {
+  .container {
+    height: 812px;
+  }
+
+  .container .app {
+    width: 90%;
+    margin: 115px auto;
+    padding: 25px;
+  }
+
+  .container .app .name {
+    font-size: 24px;
+  }
+
+}
